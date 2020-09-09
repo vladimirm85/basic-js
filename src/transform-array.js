@@ -41,7 +41,7 @@ module.exports = transform = (arr) => {
   return arr
     .reduce(
       (resultArray, element, index) =>
-        controlSequencesTypes.find((el) => el === element)
+        controlSequencesTypes.find((controlSequence) => controlSequence === element)
           ? controlSequencesMap[element](resultArray, index)
           : resultArray,
       arr
